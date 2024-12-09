@@ -6,7 +6,7 @@ plugins {
     id 'maven-publish'
     id 'io.github.gradle-nexus.publish-plugin' version '1.1.0'
     id 'signing'
-    id "org.gradle.test-retry" version "1.1.9"
+    id "org.gradle.test-retry" version "1.6.0"
 
 }
 
@@ -33,14 +33,14 @@ repositories {
 
 dependencies {
 
-    implementation 'io.nats:jnats:2.19.1'
-    implementation("com.fasterxml.jackson.core:jackson-core:2.14.2")
-    implementation("io.netty:netty-handler:4.1.97.Final")
+    implementation 'io.nats:jnats:2.20.4'
+    implementation("com.fasterxml.jackson.core:jackson-core:2.18.2")
+    implementation("io.netty:netty-handler:4.1.115.Final")
     implementation(platform("io.vertx:vertx-stack-depchain:4.5.1"))
-    implementation("io.vertx:vertx-core")
-    implementation("io.netty:netty-resolver-dns-native-macos:4.1.80.Final:osx-x86_64")
-    testImplementation("io.vertx:vertx-junit5")
-    testImplementation 'io.nats:jnats-server-runner:1.2.5'
+    implementation("io.vertx:vertx-core:4.5.11")
+    //implementation("io.netty:netty-resolver-dns-native-macos:4.1.80.Final:osx-x86_64")
+    testImplementation("io.vertx:vertx-junit5:4.5.11")
+    testImplementation 'io.nats:jnats-server-runner:1.2.7'
 }
 
 test {
